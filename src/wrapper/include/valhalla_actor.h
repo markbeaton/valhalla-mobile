@@ -7,6 +7,8 @@
 class ValhallaActor {
 public:
     std::string route(const std::string& request, const std::string& config_path);
+    std::string trace_route(const std::string& request, const std::string& config_path);
+    std::string trace_attributes(const std::string& request, const std::string& config_path);
 };
 
 #endif // VALHALLAACTOR_H

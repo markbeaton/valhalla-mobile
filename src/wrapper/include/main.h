@@ -16,6 +16,16 @@ JNIEXPORT jstring JNICALL Java_com_valhalla_valhalla_ValhallaKotlin_route(JNIEnv
                                                 jstring jRequest,
                                                 jstring jConfigPath);
 
+JNIEXPORT jstring JNICALL Java_com_valhalla_valhalla_ValhallaKotlin_trace_route(JNIEnv *env,
+                                                jobject thiz,
+                                                jstring jRequest,
+                                                jstring jConfigPath);
+
+JNIEXPORT jstring JNICALL Java_com_valhalla_valhalla_ValhallaKotlin_trace_attributes(JNIEnv *env,
+                                                jobject thiz,
+                                                jstring jRequest,
+                                                jstring jConfigPath);
+
 #ifdef __cplusplus
 }
 #endif
@@ -23,6 +33,8 @@ JNIEXPORT jstring JNICALL Java_com_valhalla_valhalla_ValhallaKotlin_route(JNIEnv
 #elif __APPLE__
 
 std::string route(const char *request, const char *config_path);
+std::string trace_route(const char *request, const char *config_path);
+std::string trace_attributes(const char *request, const char *config_path);
 
 #endif
 
